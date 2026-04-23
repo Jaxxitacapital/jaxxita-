@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Jaxxita Capital</title>
+  <meta name="description" content="Contact Jaxxita Capital for partnerships, applications, and support." />
+  <meta name="author" content="Jaxxita Capital" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #06152d;
+      --navy-2: #0f2344;
+      --gold: #d4af37;
+      --gold-soft: #e9c86a;
+      --text: #f6f8fb;
+      --muted: #b2bcc9;
+      --card: rgba(255, 255, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 16px 36px rgba(0, 0, 0, 0.36);
+      --field-bg: rgba(255, 255, 255, 0.97);
+      --field-text: #111827;
+    }
+
+    [data-theme="light"] {
+      --navy: #f3f6fb;
+      --navy-2: #e6ebf5;
+      --gold: #b88917;
+      --gold-soft: #d8aa3f;
+      --text: #0f1a2b;
+      --muted: #4f6075;
+      --card: rgba(255, 255, 255, 0.88);
+      --border: rgba(15, 26, 43, 0.14);
+      --shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+      --field-bg: #ffffff;
+      --field-text: #111827;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 80% -8%, rgba(212, 175, 55, 0.2), transparent 36%),
+        radial-gradient(circle at 0% 20%, rgba(120, 146, 180, 0.18), transparent 32%),
+        linear-gradient(145deg, var(--navy), var(--navy-2));
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1100px, 92vw); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      background: rgba(5, 18, 38, 0.66);
+    }
+
+    [data-theme="light"] .site-header { background: rgba(243, 246, 251, 0.84); }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      flex-wrap: wrap;
+    }
+
+    .brand { display: flex; align-items: center; gap: 0.7rem; font-weight: 700; }
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      object-fit: contain;
+    }
+
+    .nav-links { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+      padding: 0.55rem 0.75rem;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(212, 175, 55, 0.16);
+    }
+
+    .toolbar { display: flex; gap: 0.5rem; align-items: center; }
+
+    select,
+    .theme-toggle {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      padding: 0.5rem 0.8rem;
+      font: inherit;
+    }
+
+    select option {
+      color: #111;
+    }
+
+    .theme-toggle { cursor: pointer; min-width: 42px; }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 0 1.3rem;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      background: linear-gradient(120deg, var(--gold-soft), #fff 45%, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 200% auto;
+      animation: shine 6s linear infinite;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin: 0.6rem auto 0;
+      max-width: 56ch;
+    }
+
+    @keyframes shine { to { background-position: 200% center; } }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1rem;
+      margin: 1.4rem 0 2.2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      color: var(--gold-soft);
+    }
+
+    form { display: grid; gap: 0.75rem; }
+
+    label { font-size: 0.9rem; color: var(--muted); }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      padding: 0.78rem 0.88rem;
+      background: var(--field-bg);
+      color: var(--field-text);
+      font: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: rgba(212, 175, 55, 0.9);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+
+    .submit {
+      border: none;
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(120deg, var(--gold), var(--gold-soft));
+      color: #151515;
+      transition: 0.2s ease;
+    }
+
+    .submit:hover { transform: translateY(-1px); filter: brightness(1.03); }
+
+    .info-list {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .socials {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.08);
+      transition: 0.2s ease;
+    }
+
+    .social:hover { transform: translateY(-2px); }
+
+    .whatsapp-chat {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 40;
+    }
+
+    .whatsapp-chat a {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.45rem;
+      background: #25d366;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding: 1rem 0 1.3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Jaxxita Capital Home">
+        <img src="logo.jpg.png" alt="Jaxxita Logo" />
+        <span>Jaxxita Capital</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="join.html">Join</a>
+        <a href="partner.html">Partner</a>
+        <a href="services.html">Services</a>
+        <a href="apply.html">Apply</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="toolbar">
+        <select aria-label="Language selector" onchange="changeLanguage(this.value)">
+          <option value="en">🇺🇸 English</option>
+          <option value="fr">🇫🇷 Français</option>
+          <option value="sw">🇰🇪 Kiswahili</option>
+        </select>
+        <button class="theme-toggle" id="modeToggle" type="button" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Build • Innovate • Uplift</h1>
+      <p>Reach out to Jaxxita Capital for partnerships, applications, support, and ecosystem collaboration.</p>
+    </section>
+
+    <section class="contact-grid">
+      <article class="card">
+        <h2>Contact Us</h2>
+        <form target="_blank" action="https://formsubmit.co/jaxxitacapital@gmail.com" method="POST">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" name="name" placeholder="Full Name" required />
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" placeholder="Email Address" required />
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message..." rows="6" required></textarea>
+          </div>
+          <button class="submit" type="submit">Submit Form</button>
+        </form>
+      </article>
+
+      <aside class="card">
+        <h2>Direct Support</h2>
+        <ul class="info-list">
+          <li>Email: jaxxitacapital@gmail.com</li>
+          <li>WhatsApp: +254 701 279 476</li>
+          <li>Response Target: within 24–48 hours</li>
+          <li>Focus Areas: youth ventures, internal funding, partnerships</li>
+        </ul>
+
+        <div class="socials" aria-label="Social links">
+          <a class="social" href="https://wa.me/254701279476" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a class="social" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="social" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div class="whatsapp-chat">
+    <a href="https://wa.me/254701279476" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Jaxxita Capital. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const modeToggle = document.getElementById("modeToggle");
+
+    function setTheme(theme) {
+      body.setAttribute("data-theme", theme);
+      localStorage.setItem("jaxxita-contact-theme", theme);
+    }
+
+    modeToggle.addEventListener("click", () => {
+      const current = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      setTheme(current);
+    });
+
+    (function initTheme() {
+      const saved = localStorage.getItem("jaxxita-contact-theme") || "dark";
+      setTheme(saved);
+    })();
+
+    function changeLanguage(lang) {
+      alert("Language changed to: " + lang + " (demo)");
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    window.changeLanguage = changeLanguage;
+  </script>
+</body>
+</html>
