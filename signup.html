@@ -7,6 +7,7 @@
   <meta name="description" content="Create your Jaxxita Capital account or sign in securely." />
   <meta name="author" content="Jaxxita Capital" />
   <link rel="icon" href="assets/jaxxita-logo.svg" />
+  <link rel="icon" href="logo.jpg.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -255,6 +256,21 @@
 
     .auth-shell.signin-mode .signin-panel {
       border-left: none;
+    .auth-shell.signin-mode .signup-panel {
+      transform: translateX(-10px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .auth-shell.signin-mode .signin-panel {
+      transform: translateX(-100%);
+      opacity: 1;
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auth-shell.signin-mode {
+      grid-template-columns: 0fr 1fr;
     }
 
     .whatsapp-chat {
@@ -290,6 +306,13 @@
         border-top: 1px solid var(--border);
       }
 
+      .auth-shell.signin-mode .signup-panel,
+      .auth-shell.signin-mode .signin-panel {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
       .auth-shell.signin-mode .signup-panel {
         display: none;
       }
@@ -301,6 +324,7 @@
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Jaxxita Home">
         <img src="assets/jaxxita-logo.svg" alt="Jaxxita Logo" />
+        <img src="logo.jpg.png" alt="Jaxxita Logo" />
         <span>Jaxxita Capital</span>
       </a>
 
