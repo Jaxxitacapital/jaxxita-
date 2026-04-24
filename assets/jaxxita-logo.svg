@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Jaxxita logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031a39"/>
+      <stop offset="1" stop-color="#07254b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7c56a"/>
+      <stop offset="1" stop-color="#c9992f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)" rx="24"/>
+  <text x="85" y="305" fill="url(#gold)" font-size="220" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Jaxxita</text>
+  <path d="M850 105c28 28 25 79-4 113-29 34-43 58-42 88 25-21 53-39 80-66 20-21 38-47 40-78 27 30 28 76 3 108-19 24-41 46-58 73-8 13-13 28-13 45-25-18-42-45-47-76-7-44 8-86 34-120 21-27 24-53 7-87z" fill="url(#gold)"/>
+</svg>

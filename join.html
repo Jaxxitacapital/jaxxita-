@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us | Jaxxita Capital</title>
+  <meta name="description" content="Join the Jaxxita Capital movement and collaborate on innovation, investment, and community impact." />
+  <meta name="author" content="Jaxxita Capital" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #06152d;
+      --navy-2: #0f2344;
+      --gold: #d4af37;
+      --gold-soft: #e7c668;
+      --text: #f7f9fb;
+      --muted: #b2bcc9;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.16);
+      --shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+    }
+
+    [data-theme="light"] {
+      --navy: #f3f6fb;
+      --navy-2: #e6ebf5;
+      --gold: #b88917;
+      --gold-soft: #d8aa3f;
+      --text: #0f1a2b;
+      --muted: #4f6075;
+      --card: rgba(255, 255, 255, 0.9);
+      --border: rgba(15, 26, 43, 0.15);
+      --shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(6, 21, 45, 0.72), rgba(6, 21, 45, 0.8)),
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+    }
+
+    [data-theme="light"] body,
+    [data-theme="light"] {
+      background:
+        linear-gradient(rgba(243, 246, 251, 0.76), rgba(230, 235, 245, 0.82)),
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container { width: min(1120px, 92vw); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      background: rgba(5, 18, 38, 0.68);
+    }
+
+    [data-theme="light"] .site-header { background: rgba(243, 246, 251, 0.86); }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.7rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 700;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      object-fit: contain;
+      border: 1px solid var(--border);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+      border-radius: 999px;
+      padding: 0.52rem 0.78rem;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(212, 175, 55, 0.16);
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .toolbar select,
+    .theme-toggle {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      padding: 0.5rem 0.75rem;
+      font: inherit;
+    }
+
+    .toolbar select option { color: #111; }
+    .theme-toggle { cursor: pointer; min-width: 42px; }
+
+    .hero {
+      text-align: center;
+      padding: 4.5rem 0 2.4rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      background: rgba(212, 175, 55, 0.14);
+      color: var(--gold-soft);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 68ch;
+      margin: 0 auto 1.25rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.3rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.48rem;
+      border-radius: 12px;
+      padding: 0.72rem 1.15rem;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--gold), var(--gold-soft));
+      color: #131313;
+      border: none;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin: 0 auto 2.2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--gold-soft);
+      margin-bottom: 0.4rem;
+      font-size: 1.02rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 45;
+      border: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+      background: linear-gradient(120deg, var(--gold), var(--gold-soft));
+      color: #101010;
+      font-size: 1.05rem;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 1rem 0 1.25rem;
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    #google_translate_element {
+      position: fixed;
+      top: 86px;
+      left: 16px;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 10px;
+      padding: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 980px) {
+      .section-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 780px) {
+      #google_translate_element {
+        top: 132px;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Jaxxita Home">
+        <img src="assets/jaxxita-logo.svg" alt="Jaxxita Capital Logo" />
+        <span>Jaxxita Capital</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="join.html">Join</a>
+        <a href="partner.html">Partner</a>
+        <a href="apply.html">Apply</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="toolbar">
+        <select aria-label="Language selector" onchange="changeLanguage(this.value)">
+          <option value="en">🇺🇸 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="sw">🇰🇪 SW</option>
+        </select>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="google_translate_element" aria-label="Google Translate widget"></div>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Community & Growth</span>
+      <h1>Join the Jaxxita Capital Movement</h1>
+      <p>
+        Be part of a future-focused network building disciplined capital, innovation, and impact.
+        Join today to access collaboration opportunities, project ecosystems, and long-term growth.
+      </p>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="signup.html"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
+        <a class="btn btn-ghost" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+      </div>
+    </section>
+
+    <section class="section-grid" aria-label="Benefits of joining">
+      <article class="card">
+        <h3>Network Access</h3>
+        <p>Connect with builders, founders, and high-discipline peers across the Jaxxita ecosystem.</p>
+      </article>
+      <article class="card">
+        <h3>Project Collaboration</h3>
+        <p>Work on meaningful ventures with structured governance and clear milestone accountability.</p>
+      </article>
+      <article class="card">
+        <h3>Capital Pathways</h3>
+        <p>Engage with internal funding frameworks and preparation pipelines for scalable opportunities.</p>
+      </article>
+    </section>
+  </main>
+
+  <button class="dark-toggle" type="button" id="floatingTheme" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <footer>
+    &copy; <span id="year"></span> Jaxxita Capital. All rights reserved.
+  </footer>
+
+  <script>
+    const bodyEl = document.body;
+    const themeBtn = document.getElementById("themeToggle");
+    const floatingBtn = document.getElementById("floatingTheme");
+
+    function applyTheme(theme) {
+      bodyEl.setAttribute("data-theme", theme);
+      localStorage.setItem("jaxxita-join-theme", theme);
+    }
+
+    function toggleTheme() {
+      const next = bodyEl.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      applyTheme(next);
+    }
+
+    themeBtn.addEventListener("click", toggleTheme);
+    floatingBtn.addEventListener("click", toggleTheme);
+
+    (function initTheme() {
+      const saved = localStorage.getItem("jaxxita-join-theme") || "dark";
+      applyTheme(saved);
+    })();
+
+    function changeLanguage(lang) {
+      alert("Language changed to: " + lang + " (demo)");
+    }
+
+    function googleTranslateElementInit() {
+      if (window.google && window.google.translate) {
+        new google.translate.TranslateElement({
+          pageLanguage: "en",
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          includedLanguages: "en,fr,sw,de,ar,zh-CN,hi,es",
+          autoDisplay: false
+        }, "google_translate_element");
+      }
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    window.changeLanguage = changeLanguage;
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
