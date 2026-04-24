@@ -244,6 +244,17 @@
       border-left: 1px solid var(--border);
     }
 
+    .auth-shell.signin-mode {
+      grid-template-columns: 1fr;
+      max-width: 540px;
+    }
+
+    .auth-shell.signin-mode .signup-panel {
+      display: none;
+    }
+
+    .auth-shell.signin-mode .signin-panel {
+      border-left: none;
     .auth-shell.signin-mode .signup-panel {
       transform: translateX(-10px);
       opacity: 0.35;
