@@ -255,6 +255,21 @@
 
     .auth-shell.signin-mode .signin-panel {
       border-left: none;
+    .auth-shell.signin-mode .signup-panel {
+      transform: translateX(-10px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .auth-shell.signin-mode .signin-panel {
+      transform: translateX(-100%);
+      opacity: 1;
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auth-shell.signin-mode {
+      grid-template-columns: 0fr 1fr;
     }
 
     .whatsapp-chat {
@@ -288,6 +303,13 @@
       .signin-panel {
         border-left: none;
         border-top: 1px solid var(--border);
+      }
+
+      .auth-shell.signin-mode .signup-panel,
+      .auth-shell.signin-mode .signin-panel {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
       }
 
       .auth-shell.signin-mode .signup-panel {
