@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login | Jaxxita Capital</title>
-  <meta name="description" content="Sign in to Jaxxita Capital securely." />
+  <title>Apply | Jaxxita Capital</title>
+  <meta name="description" content="Apply for funding or program participation with Jaxxita Capital." />
   <meta name="author" content="Jaxxita Capital" />
-  <link rel="icon" href="assets/jaxxita-logo.svg" />
+  <link rel="icon" href="assets/jaxxita-logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -92,6 +92,7 @@
       font-weight: 500;
       transition: 0.2s ease;
     }
+
     .nav-links a:hover,
     .nav-links a.active {
       color: var(--text);
@@ -110,7 +111,7 @@
 
     .hero {
       text-align: center;
-      padding: 2.9rem 0 1.3rem;
+      padding: 2.9rem 0 1.4rem;
     }
 
     .hero h1 {
@@ -122,40 +123,45 @@
       color: transparent;
     }
 
-    .hero p { color: var(--muted); }
+    .hero p { color: var(--muted); max-width: 66ch; margin: 0 auto; }
 
-    .login-card {
-      max-width: 540px;
-      margin: 0 auto 2.4rem;
-      padding: 1.2rem;
+    .layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1rem;
+      margin-bottom: 2.3rem;
+    }
+
+    .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 18px;
       box-shadow: var(--shadow);
+      padding: 1.15rem;
     }
 
-    .login-card h2 {
+    .card h2 {
       color: var(--gold-soft);
-      margin-bottom: 0.35rem;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
     }
 
-    .login-card p {
+    .card p,
+    .card li {
       color: var(--muted);
-      margin-bottom: 0.7rem;
-      font-size: 0.92rem;
+      line-height: 1.65;
+      font-size: 0.94rem;
     }
+
+    .card ul { padding-left: 1.1rem; }
 
     form { display: grid; gap: 0.62rem; }
 
-    label {
-      color: var(--muted);
-      font-size: 0.88rem;
-      display: block;
-      margin-bottom: 0.3rem;
-    }
+    label { color: var(--muted); font-size: 0.88rem; display: block; margin-bottom: 0.28rem; }
 
-    input {
+    input,
+    select,
+    textarea {
       width: 100%;
       border: 1px solid transparent;
       border-radius: 12px;
@@ -165,7 +171,9 @@
       color: var(--field-text);
     }
 
-    input:focus {
+    input:focus,
+    select:focus,
+    textarea:focus {
       outline: none;
       border-color: rgba(212, 175, 55, 0.95);
       box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
@@ -182,36 +190,16 @@
       color: #151515;
     }
 
-    .social-block {
-      margin-top: 0.7rem;
-      border-top: 1px dashed var(--border);
-      padding-top: 0.75rem;
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: 0.78rem;
-      line-height: 1.5;
-      margin-top: 0.45rem;
-    }
-
-    .footer-links {
-      margin-top: 0.7rem;
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
-    .footer-links a {
-      color: var(--gold-soft);
-      font-weight: 700;
-    }
-
     footer {
       text-align: center;
       color: var(--muted);
       border-top: 1px solid var(--border);
       padding: 1rem 0 1.2rem;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -227,10 +215,10 @@
         <a href="index.html">Home</a>
         <a href="join.html">Join</a>
         <a href="partner.html">Partner</a>
-        <a href="apply.html">Apply</a>
+        <a class="active" href="apply.html">Apply</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-        <a class="active" href="login.html">Login</a>
+        <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
       </nav>
 
@@ -240,38 +228,57 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Welcome Back</h1>
-      <p>Sign in securely to continue with Jaxxita Capital.</p>
+      <h1>Apply to Jaxxita Capital</h1>
+      <p>Submit your application for funding, collaboration, or program participation. We review for impact, feasibility, and governance alignment.</p>
     </section>
 
-    <section class="login-card">
-      <h2>Sign In</h2>
-      <p>Use your account credentials or continue with Google.</p>
+    <section class="layout">
+      <article class="card">
+        <h2>Before You Apply</h2>
+        <ul>
+          <li>Prepare a clear problem statement and your proposed solution.</li>
+          <li>Include an estimated budget and phased timeline.</li>
+          <li>Show expected outcomes and how success will be measured.</li>
+          <li>Confirm governance readiness and reporting capacity.</li>
+        </ul>
 
-      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Connect this login form to your authentication backend.');">
-        <div>
-          <label for="login-email">Email Address</label>
-          <input id="login-email" type="email" required />
-        </div>
-        <div>
-          <label for="login-password">Password</label>
-          <input id="login-password" type="password" minlength="8" required />
-        </div>
+        <h2 style="margin-top:1rem;">Review Criteria</h2>
+        <p>Applications are evaluated on mission fit, operational realism, impact potential, and compliance with the Jaxxita Capital framework.</p>
+      </article>
 
-        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-        <button class="btn" type="submit">Sign In</button>
-      </form>
-
-      <div class="social-block">
-        <div id="g_id_onload"
-             data-client_id="YOUR_GOOGLE_CLIENT_ID"
-             data-callback="handleGoogleAuth"
-             data-auto_prompt="false"></div>
-        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="signin_with" data-shape="pill"></div>
-        <p class="small">Replace `YOUR_GOOGLE_CLIENT_ID` and `YOUR_RECAPTCHA_SITE_KEY` with your live keys.</p>
-      </div>
-
-      <p class="footer-links">No account yet? <a href="signup.html">Create one</a>.</p>
+      <article class="card">
+        <h2>Application Form</h2>
+        <form action="https://formsubmit.co/jaxxitacapital@gmail.com" method="POST" target="_blank">
+          <input type="hidden" name="_subject" value="New Jaxxita Application" />
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+          <div>
+            <label for="project">Project / Venture Name</label>
+            <input id="project" type="text" name="project" required />
+          </div>
+          <div>
+            <label for="type">Application Type</label>
+            <select id="type" name="application_type" required>
+              <option value="">Select Type</option>
+              <option value="Funding">Funding</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Program Participation">Program Participation</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Proposal Summary</label>
+            <textarea id="message" name="message" rows="6" placeholder="Describe your proposal, budget needs, timeline, and expected impact." required></textarea>
+          </div>
+          <button class="btn" type="submit">Submit Application</button>
+        </form>
+      </article>
     </section>
   </main>
 
@@ -279,15 +286,13 @@
     &copy; <span id="year"></span> Jaxxita Capital. All rights reserved.
   </footer>
 
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     const bodyRoot = document.body;
     const themeToggle = document.getElementById("themeToggle");
 
     function applyTheme(theme) {
       bodyRoot.setAttribute("data-theme", theme);
-      localStorage.setItem("jaxxita-login-theme", theme);
+      localStorage.setItem("jaxxita-apply-theme", theme);
     }
 
     themeToggle.addEventListener("click", () => {
@@ -296,23 +301,11 @@
     });
 
     (function initTheme() {
-      const saved = localStorage.getItem("jaxxita-login-theme") || "dark";
+      const saved = localStorage.getItem("jaxxita-apply-theme") || "dark";
       applyTheme(saved);
     })();
 
-    function handleGoogleAuth(response) {
-      console.log("Google credential response:", response);
-      alert("Google Sign-In received. Connect callback to your backend verification endpoint.");
-    }
-
     document.getElementById("year").textContent = new Date().getFullYear();
-    window.handleGoogleAuth = handleGoogleAuth;
   </script>
-  <meta http-equiv="refresh" content="0; url=signup.html?mode=signin" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | Jaxxita Capital</title>
-</head>
-<body>
-  <p>Redirecting to sign in... <a href="signup.html?mode=signin">Click here if not redirected.</a></p>
 </body>
 </html>
