@@ -349,6 +349,10 @@
       margin: 0 0 2.8rem;
     }
 
+    .explore-panel[hidden] {
+      display: none;
+    }
+
     .section-title {
       margin: 0 0 0.8rem;
       font-size: 1.5rem;
@@ -409,6 +413,14 @@
     .cta p {
       color: var(--muted);
       margin: 0.4rem 0 1rem;
+    }
+
+    #google_translate_element {
+      margin-top: 0.9rem;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 6px 8px;
     }
 
     .site-footer {
@@ -518,6 +530,7 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="apply.html">Apply for Funding</a>
+          <button class="btn btn-ghost" id="exploreToggle" type="button">Explore</button>
           <a class="btn btn-ghost" href="#model">Explore Z-825</a>
         </div>
 
@@ -532,6 +545,7 @@
             <img src="https://flagcdn.com/w40/ke.png" alt="Kiswahili" />
           </button>
         </div>
+        <div id="google_translate_element" aria-label="Language translation"></div>
       </div>
 
       <aside class="hero-card" aria-label="Core quick facts">
@@ -546,6 +560,71 @@
       </aside>
     </section>
 
+    <div id="exploreDetails" class="explore-panel" hidden>
+      <section class="stats" aria-label="Key numbers">
+        <article class="stat"><strong>48</strong><span>Months in Z-825 cycle</span></article>
+        <article class="stat"><strong>70%</strong><span>Founder base stake</span></article>
+        <article class="stat"><strong>5%</strong><span>Profit to CPF annually</span></article>
+        <article class="stat"><strong>70%</strong><span>Approval threshold for funding</span></article>
+      </section>
+
+      <section class="section" id="model">
+        <h2 class="section-title">Z-825 Model — Structured for resilience</h2>
+        <p class="section-sub">A 4-year capital cycle designed for predictable pooling, disciplined governance, and scalable deployment.</p>
+
+        <div class="grid-3">
+          <article class="section-card">
+            <h3>Contribution Rules</h3>
+            <ul class="checklist">
+              <li>KSh 825 standard monthly contribution.</li>
+              <li>Due each month by the 10th.</li>
+              <li>KSh 100 penalty per week late.</li>
+              <li>Accelerated contribution path available.</li>
+            </ul>
+          </article>
+
+          <article class="section-card">
+            <h3>Governance Guardrails</h3>
+            <ul class="checklist">
+              <li>Written proposals required for project funding.</li>
+              <li>70% member agreement to approve disbursements.</li>
+              <li>Rotational operations to reduce founder dependency.</li>
+              <li>Early exits carry a capital forfeiture clause.</li>
+            </ul>
+          </article>
+
+          <article class="section-card">
+            <h3>Capital Protection</h3>
+            <ul class="checklist">
+              <li>5% of profits allocated to CPF.</li>
+              <li>Emergency liquidity and downside cushioning.</li>
+              <li>Internal stability before external expansion.</li>
+              <li>Risk review embedded in every phase.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="roadmap">
+        <h2 class="section-title">Operational Roadmap</h2>
+        <p class="section-sub">Execution is staged to preserve momentum while improving decision quality over time.</p>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <strong>Phase 1 — Building</strong>
+            <p>Team education, policy alignment, and formal business registration.</p>
+          </article>
+          <article class="timeline-item">
+            <strong>Phase 2 — Growth</strong>
+            <p>Capital cycle activation, internal lending, project seeding, and investor readiness.</p>
+          </article>
+          <article class="timeline-item">
+            <strong>Phase 3 — Scale</strong>
+            <p>Institutional formalization and launch of a dedicated management technology platform.</p>
+          </article>
+        </div>
+      </section>
+    </div>
     <section class="stats" aria-label="Key numbers">
       <article class="stat"><strong>48</strong><span>Months in Z-825 cycle</span></article>
       <article class="stat"><strong>70%</strong><span>Founder base stake</span></article>
@@ -640,6 +719,8 @@
   <script>
     const root = document.body;
     const toggle = document.getElementById("themeToggle");
+    const exploreToggle = document.getElementById("exploreToggle");
+    const exploreDetails = document.getElementById("exploreDetails");
 
     function applyTheme(theme) {
       root.setAttribute("data-theme", theme);
@@ -656,6 +737,9 @@
       applyTheme(saved);
     })();
 
+    function initTranslate() {
+      if (window.google && window.google.translate) {
+        new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
     function openWhatsApp() {
       window.open("https://wa.me/254701279476", "_blank", "noopener,noreferrer");
     }
@@ -667,6 +751,11 @@
     }
 
     function changeLang(lang) {
+      let select = document.querySelector(".goog-te-combo");
+      if (!select) {
+        initTranslate();
+        select = document.querySelector(".goog-te-combo");
+      }
       const select = document.querySelector(".goog-te-combo");
       if (select) {
         select.value = lang;
@@ -674,6 +763,21 @@
       }
     }
 
+    exploreToggle.addEventListener("click", () => {
+      const isHidden = exploreDetails.hasAttribute("hidden");
+      if (isHidden) {
+        exploreDetails.removeAttribute("hidden");
+        exploreToggle.textContent = "Hide details";
+        document.getElementById("model").scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        exploreDetails.setAttribute("hidden", "");
+        exploreToggle.textContent = "Explore";
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    window.changeLang = changeLang;
+    window.initTranslate = initTranslate;
     document.getElementById("year").textContent = new Date().getFullYear();
     window.changeLang = changeLang;
     window.initTranslate = initTranslate;
