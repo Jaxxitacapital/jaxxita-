@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat | Campus Meatball Co.</title>
-  <meta name="description" content="Chat with Campus Meatball Co., get quick answers, and forward questions to WhatsApp." />
+  <meta name="description" content="Chat with Campus Meatball Co. and send messages through WhatsApp." />
   <meta name="author" content="Campus Meatball Co." />
   <meta property="og:title" content="Chat | Campus Meatball Co." />
-  <meta property="og:description" content="Chat with Campus Meatball Co., get quick answers, and forward questions to WhatsApp." />
-  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/a/a4/Swedish_meatballs.jpg" />
+  <meta property="og:description" content="Chat with Campus Meatball Co. and send messages through WhatsApp." />
+  <meta property="og:image" content="assets/meatball-hero.svg" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,10 +37,10 @@
   </header>
 
   <main>
-    <section class="container page-hero"><span class="eyebrow">Chat page</span><h1>Ask about meatballs, prices, paste, or delivery.</h1><p class="lede">Type your message for instant answers, then send the same question to WhatsApp when you want a real reply from the business.</p></section>
+    <section class="container page-hero"><span class="eyebrow">Quick chat</span><h1>Ask before you order.</h1><p class="lede">Use the chat assistant for instant answers, then send your exact message to WhatsApp for real order coordination.</p></section>
     <section class="container section"><div class="grid-2">
-      <section class="card chat-shell" aria-label="Meatball chat assistant"><div class="chat-header"><strong>Campus Meatball Chat</strong><span class="status-dot">Online</span></div><div class="chat-messages" id="chatMessages"><div class="bubble bot">Hi! Ask about the menu, prices, delivery, student discount, extra paste, or late-night study pack.</div></div><form class="chat-form" id="chatForm"><input id="chatInput" type="text" placeholder="Type your question" autocomplete="off" required /><button class="btn btn-primary" type="submit">Ask</button></form></section>
-      <article class="card feature-card"><img class="inline-photo" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Swedish_Meatballs_2.jpg" alt="Real meatball photo for chat and WhatsApp orders" loading="lazy" /><div class="icon">📲</div><h2>Send the message</h2><p>After typing your question, tap below to send it directly to the order line. WhatsApp will open with your message ready.</p><div class="hero-actions"><a class="btn btn-whatsapp" id="sendChatToWhatsapp" href="#">Send to WhatsApp</a><a class="btn btn-light" href="mailto:jaxxitacapital@gmail.com">Email us</a></div><div class="contact-methods"><a class="contact-method" href="tel:+254701279476"><span>📞</span><span>0701 279 476</span></a><div class="contact-method"><span>📍</span><span>Near Rafiki, Kabarak University</span></div></div></article>
+      <article class="card chat-shell"><div class="chat-header"><strong>Campus Meatball Co. Assistant</strong><span class="status-dot">Online</span></div><div class="chat-messages" id="chatMessages" aria-live="polite"><div class="bubble bot">Hi comrade 👋 Ask about prices, delivery, discount, paste, or late-night orders.</div></div><form class="chat-form" id="chatForm"><input id="chatInput" type="text" placeholder="Type your question..." autocomplete="off" required /><button class="btn btn-primary" type="submit">Ask</button></form></article>
+      <article class="card feature-card"><div class="icon">📲</div><h2>Send the message</h2><p>After typing your question, tap below to send it directly to the order line. WhatsApp will open with your message ready.</p><div class="hero-actions"><a class="btn btn-whatsapp" id="sendChatToWhatsapp" href="#">Send to WhatsApp</a><a class="btn btn-light" href="mailto:jaxxitacapital@gmail.com">Email us</a></div><div class="contact-methods"><a class="contact-method" href="tel:+254701279476"><span>📞</span><span>0701 279 476</span></a><div class="contact-method"><span>📍</span><span>Near Rafiki, Kabarak University</span></div></div></article>
     </div></section>
   </main>
   <a class="floating-whatsapp" data-order="3 Meatballs + Paste — KSh 100" aria-label="Order on WhatsApp">💬</a>
