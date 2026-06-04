@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews | Campus Meatball Co.</title>
+  <meta name="description" content="Read and send Campus Meatball Co. reviews with interactive star ratings." />
+  <meta name="author" content="Campus Meatball Co." />
+  <meta property="og:title" content="Reviews | Campus Meatball Co." />
+  <meta property="og:description" content="Read and send Campus Meatball Co. reviews with interactive star ratings." />
+  <meta property="og:image" content="assets/meatball-hero.svg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/meatball.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Campus Meatball Co. home"><span class="brand-mark">🍖</span><span>Campus Meatball Co.</span></a>
+      <nav class="nav-links" data-nav-links aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reviews.html" class="active">Reviews</a>
+        <a href="chat.html">Chat</a>
+        <a href="updates.html">Updates</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle dark or light mode">🌓</button>
+        <a class="btn btn-primary" data-order="3 Meatballs + Paste — KSh 100">Order Now</a>
+        <button class="menu-toggle" data-menu-toggle type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-hero"><span class="eyebrow">Customer voice</span><h1>Rate the meatballs and send your review.</h1><p class="lede">Your review appears on this page and opens WhatsApp so the business receives it. This keeps the starter website interactive before a full backend is added.</p></section>
+    <section class="container section"><div class="grid-2">
+      <div class="review-list" id="reviewList">
+        <article class="review"><div class="review-head"><strong>Brian, 3rd Year</strong><span class="stars">★★★★★</span></div><p>The fries combo is exactly what I need after lectures. Fast delivery around campus too.</p></article>
+        <article class="review"><div class="review-head"><strong>Mercy, Hostel Order</strong><span class="stars">★★★★★</span></div><p>The paste is the secret. I always add extra because it makes the meatballs hit different.</p></article>
+        <article class="review"><div class="review-head"><strong>Study Group</strong><span class="stars">★★★★☆</span></div><p>The 10 meatballs box is perfect when we are revising together. Good value for comrades.</p></article>
+      </div>
+      <form class="card form-grid" id="reviewForm">
+        <h2>Leave a review</h2>
+        <label>Name or nickname<input id="reviewName" type="text" placeholder="e.g. Kabarak Comrade" required /></label>
+        <div><p style="margin-bottom:.3rem;color:var(--muted);font-weight:800;">Rating</p><div class="rating-picker" aria-label="Choose rating"><input type="radio" name="rating" value="5" id="star5" checked><label for="star5">★</label><input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label><input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label><input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label><input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label></div></div>
+        <label>Review<textarea id="reviewText" rows="6" placeholder="Tell us what you loved or what we should improve" required></textarea></label>
+        <button class="btn btn-primary" type="submit">Post and send review</button><p class="status-line" id="reviewStatus" aria-live="polite"></p>
+      </form>
+    </div></section>
+  </main>
+  <a class="floating-whatsapp" data-order="3 Meatballs + Paste — KSh 100" aria-label="Order on WhatsApp">💬</a>
+  <footer class="footer"><div class="container"><strong>Campus Meatball Co.</strong> • Rafiki, Kabarak University • &copy; <span id="year"></span>. Built for comrades, powered by flavor.</div></footer>
+  <script src="assets/meatball.js"></script>
+</body>
+</html>
