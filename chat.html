@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meatball Chat | Campus Meatball Co.</title>
+  <meta name="description" content="Chat with Campus Meatball Co. about meatballs and forward questions to WhatsApp." />
+  <meta name="author" content="Campus Meatball Co." />
+  <meta property="og:title" content="Meatball Chat | Campus Meatball Co." />
+  <meta property="og:description" content="Chat with Campus Meatball Co. about meatballs and forward questions to WhatsApp." />
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/a/a4/Swedish_meatballs.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/meatball.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Campus Meatball Co. home"><span class="brand-mark">🍖</span><span>Campus Meatball Co.</span></a>
+      <nav class="nav-links" data-nav-links aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Meatball Menu</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="chat.html" class="active">Meatball Chat</a>
+        <a href="updates.html">Meatball Updates</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle dark or light mode">🌓</button>
+        <a class="btn btn-primary" data-order="3 Meatballs + Paste — KSh 100">Order Now</a>
+        <button class="menu-toggle" data-menu-toggle type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-hero"><span class="eyebrow">Meatball chat</span><h1>Ask about meatballs, prices, paste, or delivery.</h1><p class="lede">Type your meatball question for instant answers, then send the same question to WhatsApp when you want a real reply from the business.</p></section>
+    <section class="container section"><div class="grid-2">
+      <section class="card chat-shell" aria-label="Meatball chat assistant"><div class="chat-header"><strong>Campus Meatball Chat</strong><span class="status-dot">Online</span></div><div class="chat-messages" id="chatMessages"><div class="bubble bot">Hi! Ask about meatball packs, meatball prices, meatball delivery, student meatball deals, or extra paste.</div></div><form class="chat-form" id="chatForm"><input id="chatInput" type="text" placeholder="Type your meatball question" autocomplete="off" required /><button class="btn btn-primary" type="submit">Ask</button></form></section>
+      <article class="card feature-card"><img class="inline-photo" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Swedish_Meatballs_2.jpg" alt="Meatball photo for chat and WhatsApp orders" loading="lazy" /><div class="icon">📲</div><h2>Send the meatball message</h2><p>After typing your meatball question, tap below to send it directly to the order line. WhatsApp will open with your message ready.</p><div class="hero-actions"><a class="btn btn-whatsapp" id="sendChatToWhatsapp" href="#">Send to WhatsApp</a><a class="btn btn-light" href="mailto:jaxxitacapital@gmail.com">Email us</a></div><div class="contact-methods"><a class="contact-method" href="tel:+254701279476"><span>📞</span><span>0701 279 476</span></a><div class="contact-method"><span>📍</span><span>Near Rafiki, Kabarak University</span></div></div></article>
+    </div></section>
+  </main>
+  <a class="floating-whatsapp" data-order="3 Meatballs + Paste — KSh 100" aria-label="Order meatballs on WhatsApp">💬</a>
+  <footer class="footer"><div class="container"><strong>Campus Meatball Co.</strong> • Rafiki, Kabarak University • &copy; <span id="year"></span>. Meatballs only, made for comrades.</div></footer>
+  <script src="assets/meatball.js"></script>
+</body>
+</html>
