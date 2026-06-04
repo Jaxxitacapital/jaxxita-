@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" role="img" aria-label="Meatball Box">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#7c2d12"/><stop offset=".55" stop-color="#2a100b"/><stop offset="1" stop-color="#120705"/></radialGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity=".38"/></filter>
+</defs>
+<rect width="1100" height="750" fill="url(#bg)"/>
+<circle cx="930" cy="120" r="150" fill="#fdba74" opacity=".13"/>
+<circle cx="180" cy="650" r="210" fill="#ef4444" opacity=".1"/>
+<g filter="url(#shadow)">
+<ellipse cx="550" cy="510" rx="370" ry="115" fill="#b8321e" opacity=".88"/>
+<ellipse cx="550" cy="503" rx="315" ry="78" fill="#e34a2f" opacity=".65"/>
+<path d="M245 520 C370 585 695 592 842 512" fill="none" stroke="#ffbd55" stroke-width="16" stroke-linecap="round" opacity=".45"/>
+<g>
+  <circle cx="315" cy="430" r="86" fill="#7b2f20"/>
+  <circle cx="293.5" cy="405.9" r="18.9" fill="#a85532" opacity=".75"/>
+  <circle cx="339.1" cy="447.2" r="11.2" fill="#42150f" opacity=".28"/>
+  <path d="M 267.7 434.3 C 302.1 455.8, 332.2 451.5, 362.3 425.7" fill="none" stroke="#f59e0b" stroke-width="6.9" stroke-linecap="round" opacity=".7"/>
+</g>
+<g>
+  <circle cx="420" cy="350" r="88" fill="#7b2f20"/>
+  <circle cx="398.0" cy="325.4" r="19.4" fill="#a85532" opacity=".75"/>
+  <circle cx="444.6" cy="367.6" r="11.4" fill="#42150f" opacity=".28"/>
+  <path d="M 371.6 354.4 C 406.8 376.4, 437.6 372.0, 468.4 345.6" fill="none" stroke="#f59e0b" stroke-width="7.0" stroke-linecap="round" opacity=".7"/>
+</g>
+<g>
+  <circle cx="520" cy="430" r="90" fill="#7b2f20"/>
+  <circle cx="497.5" cy="404.8" r="19.8" fill="#a85532" opacity=".75"/>
+  <circle cx="545.2" cy="448.0" r="11.7" fill="#42150f" opacity=".28"/>
+  <path d="M 470.5 434.5 C 506.5 457.0, 538.0 452.5, 569.5 425.5" fill="none" stroke="#f59e0b" stroke-width="7.2" stroke-linecap="round" opacity=".7"/>
+</g>
+<g>
+  <circle cx="610" cy="340" r="86" fill="#7b2f20"/>
+  <circle cx="588.5" cy="315.9" r="18.9" fill="#a85532" opacity=".75"/>
+  <circle cx="634.1" cy="357.2" r="11.2" fill="#42150f" opacity=".28"/>
+  <path d="M 562.7 344.3 C 597.1 365.8, 627.2 361.5, 657.3 335.7" fill="none" stroke="#f59e0b" stroke-width="6.9" stroke-linecap="round" opacity=".7"/>
+</g>
+<g>
+  <circle cx="705" cy="430" r="92" fill="#7b2f20"/>
+  <circle cx="682.0" cy="404.2" r="20.2" fill="#a85532" opacity=".75"/>
+  <circle cx="730.8" cy="448.4" r="12.0" fill="#42150f" opacity=".28"/>
+  <path d="M 654.4 434.6 C 691.2 457.6, 723.4 453.0, 755.6 425.4" fill="none" stroke="#f59e0b" stroke-width="7.4" stroke-linecap="round" opacity=".7"/>
+</g>
+<g>
+  <circle cx="805" cy="360" r="84" fill="#7b2f20"/>
+  <circle cx="784.0" cy="336.5" r="18.5" fill="#a85532" opacity=".75"/>
+  <circle cx="828.5" cy="376.8" r="10.9" fill="#42150f" opacity=".28"/>
+  <path d="M 758.8 364.2 C 792.4 385.2, 821.8 381.0, 851.2 355.8" fill="none" stroke="#f59e0b" stroke-width="6.7" stroke-linecap="round" opacity=".7"/>
+</g>
+<g>
+  <circle cx="555" cy="525" r="84" fill="#7b2f20"/>
+  <circle cx="534.0" cy="501.5" r="18.5" fill="#a85532" opacity=".75"/>
+  <circle cx="578.5" cy="541.8" r="10.9" fill="#42150f" opacity=".28"/>
+  <path d="M 508.8 529.2 C 542.4 550.2, 571.8 546.0, 601.2 520.8" fill="none" stroke="#f59e0b" stroke-width="6.7" stroke-linecap="round" opacity=".7"/>
+</g>
+</g>
+<text x="64" y="96" font-family="Poppins, Arial, sans-serif" font-size="54" font-weight="900" fill="#fff7ed">Meatball Box</text>
+<text x="66" y="145" font-family="Poppins, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffd18a">For squads and groups</text>
+</svg>
