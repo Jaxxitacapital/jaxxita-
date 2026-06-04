@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Ten meatballs box for sharing</title>
+  <desc id="desc">Illustrated meatball food image for Campus Meatball Co.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff2c8"/><stop offset="1" stop-color="#ffb36b"/></linearGradient>
+    <radialGradient id="meat" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#8b3a1f"/><stop offset="1" stop-color="#3f170f"/></radialGradient>
+    <linearGradient id="sauce" x1="0" x2="1"><stop offset="0" stop-color="#e33a24"/><stop offset="1" stop-color="#9f1f14"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#5a240f" flood-opacity="0.28"/></filter>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <circle cx="120" cy="90" r="90" fill="#ffd166" opacity=".48"/>
+  <circle cx="780" cy="90" r="110" fill="#e33a24" opacity=".16"/>
+  <ellipse cx="450" cy="455" rx="330" ry="92" fill="#5a240f" opacity=".16"/>
+  <g filter="url(#shadow)"><rect x="190" y="180" width="520" height="330" rx="46" fill="#f3d8a7"/><rect x="235" y="220" width="430" height="245" rx="34" fill="#fff6e3"/><ellipse cx="450" cy="345" rx="185" ry="72" fill="url(#sauce)"/><circle cx="300" cy="300" r="43" fill="url(#meat)"/><circle cx="375" cy="300" r="43" fill="url(#meat)"/><circle cx="450" cy="300" r="43" fill="url(#meat)"/><circle cx="525" cy="300" r="43" fill="url(#meat)"/><circle cx="600" cy="300" r="43" fill="url(#meat)"/><circle cx="300" cy="378" r="43" fill="url(#meat)"/><circle cx="375" cy="378" r="43" fill="url(#meat)"/><circle cx="450" cy="378" r="43" fill="url(#meat)"/><circle cx="525" cy="378" r="43" fill="url(#meat)"/><circle cx="600" cy="378" r="43" fill="url(#meat)"/></g>
+</svg>
